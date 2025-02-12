@@ -1,35 +1,35 @@
 // // Merge Sorted Array 
 // // Example 1: Input: nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
 
-// let nums1 = [1,2,3,0,0,0];
-// let nums2 = [2,5,6];
-// let i=0, j=0;
-// const mergeTwoSortedArray=(arr1,arr2)=>{
-//     arr1=arr1.filter((num)=>num!==0);
-//     arr2=arr2.filter(num=>num!==0);
+let nums1 = [1,2,3,0,0,0];
+let nums2 = [2,5,6];
+let i=0, j=0;
+const mergeTwoSortedArray=(arr1,arr2)=>{
+    arr1=arr1.filter((num)=>num!==0);
+    arr2=arr2.filter(num=>num!==0);
 
-//     let mergeArray=[];
-//     while(i<arr1.length && j<arr2.length){
-//         if (arr1[i]<arr2[j]) {
-//             mergeArray.push(arr1[i])
-//             i++
-//         }else{
-//             mergeArray.push(arr2[j])
-//             j++
-//         }
-//     }
-//     while (i<arr1.length) {
-//         mergeArray.push(arr1[i])
-//         i++
-//     }
-//     while (j<arr2.length) {
-//         mergeArray.push(arr2[j])
-//         j++
-//     }
-//     return mergeArray
-// }
+    let mergeArray=[];
+    while(i<arr1.length && j<arr2.length){
+        if (arr1[i]<arr2[j]) {
+            mergeArray.push(arr1[i])
+            i++
+        }else{
+            mergeArray.push(arr2[j])
+            j++
+        }
+    }
+    while (i<arr1.length) {
+        mergeArray.push(arr1[i])
+        i++
+    }
+    while (j<arr2.length) {
+        mergeArray.push(arr2[j])
+        j++
+    }
+    return mergeArray
+}
 
-// console.log(mergeTwoSortedArray(nums1,nums2));
+console.log(mergeTwoSortedArray(nums1,nums2));
 
 // Remove Element 
 
@@ -99,26 +99,26 @@
 // The result of the merge is [1,2,2,3,5,6] with the underlined elements coming from nums1.
 
 
-let  merge = (nums1, m, nums2, n) =>{
-    let i = m - 1;
-    let j = n - 1; 
-    let k = m + n - 1; 
+// let  merge = (nums1, m, nums2, n) =>{
+//     let i = m - 1;
+//     let j = n - 1; 
+//     let k = m + n - 1; 
 
-    while (j >= 0) {
-        if (i >= 0 && nums1[i] > nums2[j]) {
-            nums1[k] = nums1[i];
-            i--;
-        } else {
-            nums1[k] = nums2[j];
-            j--;
-        }
-        k--;
-    }
-};
-let nums1 = [1,2,3,0,0,0], m = 3;
-let nums2 = [2,5,6], n = 3;
-merge(nums1, m, nums2, n);
-console.log(nums1); 
+//     while (j >= 0) {
+//         if (i >= 0 && nums1[i] > nums2[j]) {
+//             nums1[k] = nums1[i];
+//             i--;
+//         } else {
+//             nums1[k] = nums2[j];
+//             j--;
+//         }
+//         k--;
+//     }
+// };
+// let nums1 = [1,2,3,0,0,0], m = 3;
+// let nums2 = [2,5,6], n = 3;
+// merge(nums1, m, nums2, n);
+// console.log(nums1); 
 
 
 
